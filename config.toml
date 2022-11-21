@@ -1,4 +1,4 @@
-baseURL = 'https://alanderos91.github.io'
+baseURL = "https://alanderos91.github.io/"
 languageCode = 'en-us'
 title = 'Alfonso Landeros'
 theme = "hugo-astatine-theme"
