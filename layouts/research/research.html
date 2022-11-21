@@ -1,0 +1,23 @@
+{{ define "main" }}
+    {{ .Content }}
+    <!-- List content -->
+    {{ with .Params.Publications }}
+        <h1 id="publications">Published Work</h1>
+    {{ end }}
+    {{ range .Params.Publications }}
+        {{ partial "publication.html" . }}
+    {{ end }}
+    {{ with .Params.Preprints }}
+        <h1 id="preprints">Preprints</h1>
+    {{ end }}
+    {{ range .Params.Preprints }}
+        {{ partial "publication.html" . }}
+    {{ end }}
+    <!-- Add JS for modal -->
+    {{ range .Params.Publications }}
+        {{ partial "modal_publication.html" . }}
+    {{ end }}
+    {{ range .Params.Preprints }}
+        {{ partial "modal_publication.html" . }}
+    {{ end }}
+{{ end }}
